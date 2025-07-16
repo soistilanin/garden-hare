@@ -1,84 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GAVST Graduates Map</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAVST Graduates Map</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f9f9f9;
-            color: #333;
-            margin: 0;
-            padding: 1rem;
-            line-height: 1.6;
-        }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #fdfdfd;
+      color: #1e1e1e;
+      margin: 0;
+      padding: 0;
+    }
 
-        h1 {
-            font-size: 2rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem;
+    }
 
-        p {
-            font-size: 1rem;
-            max-width: 700px;
-            margin: 0 auto 1.5rem;
-            padding: 0 1rem;
-        }
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
 
-        .map-container {
-            position: relative;
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding-bottom: 60%; /* Responsive aspect ratio */
-            height: 0;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.02em;
+    }
 
-        .map-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+    p {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: #4a4a4a;
+      margin: 0 auto 1.6rem;
+      max-width: 700px;
+    }
 
-        @media (min-width: 768px) {
-            h1 {
-                font-size: 2.4rem;
-            }
+    .map-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+      margin-bottom: 4rem;
+    }
 
-            p {
-                font-size: 1.1rem;
-            }
+    .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
 
-            .map-container {
-                padding-bottom: 50%;
-            }
-        }
-    </style>
+    .credits {
+      font-size: 0.95rem;
+      color: #888;
+      text-align: center;
+      max-width: 650px;
+      margin: 3rem auto 0;
+    }
+
+    .credits a {
+      color: #888;
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2.6rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-
-    <h1>Where did GAVST Graduates go?</h1>
-
-    <p>Choose a year from the layers on the top left of the map to see where the graduates of the Geraard Adriaan van Swieten Horticultural School were working from 1900 to 2000. Click on the garden hares to learn more.</p>
+  <main>
+    <header>
+      <h1>Where did GAVST Graduates go?</h1>
+      <p>Choose a year from the layers on the top left of the map to see where the graduates of the Geraard Adriaan van Swieten Horticultural School were working from 1900 to 2000. Click on the garden hares to learn more.</p>
+    </header>
 
     <div class="map-container">
-        <iframe src="map.html" title="Countries of residence of GAVST graduates per year."></iframe>
+      <iframe src="map.html" title="Countries of residence of GAVST graduates per year."></iframe>
     </div>
 
-    <p>Hello! Map by Nina Litsios (July 2025). Base layer of map is "cartodb positron". The hare icons used are from <a href="https://icons8.com" target="_blank" rel="noopener noreferrer">icons8.com</a>. The data was retrieved from the address lists of the VOLDGAVST yearbooks published in 1900, 1925, 1950, 1975, and 2000.</p>
-
+    <div class="credits">
+      Map by Nina Litsios (July 2025). The base layer is <em>CartoDB Positron</em>. Hare icons from 
+      <a href="https://icons8.com" target="_blank" rel="noopener noreferrer">icons8.com</a>. Data from VOLDGAVST yearbooks (1900–2000).
+    </div>
+  </main>
 </body>
+</html>
 </html>
